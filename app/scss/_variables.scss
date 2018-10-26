@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,700,900&subset=cyrillic);
+
+$baseFontFamily: 'Fira Sans', sans-serif;
+$baseFontSize: 18px;
+$baseFontWeight: 300;
+$boldFontWeight: 700;
+$blackFontWeight: 900;
+
+$white: #fff;
+$brown: #572300;
+$grayDarker: #606060;
+$gray: #818181;
+$grayLighter: #b5b5b5;
+$grayLight: #e3e3e3;
+$accentColor: #fb6400;
+
+@mixin mediaLg {
+  @media (min-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media (min-width: 990px) and (max-width: 1169px) {
+    @content;
+  }
+}
+
+@mixin mediaMdMin {
+  @media (min-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mediaMdMax {
+  @media (max-width: 1169px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media (min-width: 768px) and (max-width: 989px) {
+    @content;
+  }
+}
+
+@mixin mediaSmMin {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaSmMax {
+  @media (max-width: 989px) {
+    @content;
+  }
+}
+
+@mixin mediaTs {
+  @media (min-width: 500px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mediaTsMax {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mediaTsMin {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaXs {
+  @media (max-width: 499px) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

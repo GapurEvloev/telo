@@ -1,0 +1,77 @@
+.subscribe-section {
+  padding: 34px 0 40px;
+  text-align: center;
+  background-color: $grayLight;
+
+  h5 {
+    margin: 0 0 22px;
+    font-weight: $baseFontWeight;
+
+    @include mediaXs {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .fieldset {
+    position: relative;
+    font-size: 0;
+
+    .error {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: block;
+      padding: 5px;
+      font-size: 14px;
+      color: $white;
+    }
+  }
+
+  input[type=text],
+  input[type=email] {
+    width: 190px;
+    height: 24px;
+    padding: 3px 10px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include mediaXs {
+      margin: 0 auto 10px;
+      display: block;
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+
+  input[type=submit] {
+    margin-left: 10px;
+    padding: 4px 22px;
+    font-size: 14px;
+    background-color: $accentColor;
+    border-color: $accentColor;
+
+    @include mediaXs {
+      margin-left: 0;
+      width: 100%;
+      max-width: 240px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken($accentColor, 3%);
+      border-color: darken($accentColor, 3%);
+    }
+
+    &:active {
+      background-color: darken($accentColor, 10%);
+      border-color: darken($accentColor, 10%);
+    }
+  }
+
+  .success {
+    color: $accentColor;
+  }
+}

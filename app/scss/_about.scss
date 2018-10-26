@@ -1,0 +1,76 @@
+.about-section {
+  padding: 50px 0;
+  text-align: center;
+
+  @include mediaTsMax {
+    padding-top: 35px;
+  }
+
+  h2 {
+    margin: 0 auto 22px;
+    max-width: 800px;
+
+    @include mediaSmMax {
+      max-width: 650px;
+    }
+  }
+
+  p + h2 {
+    margin: 26px auto 0;
+  }
+
+  .how-it-works-list {
+    margin: 50px 0 70px;
+    font-size: 0;
+
+    @include mediaTsMax {
+      margin: 20px 0 0;
+    }
+
+    li {
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+      width: 33.33333%;
+      padding: 115px 15px 0;
+      font-size: $baseFontSize;
+
+      @include mediaTsMax {
+        margin-bottom: 15px;
+        width: 220px;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+
+        br {
+          display: none;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-left: -30px;
+        width: 61px;
+        height: 63px;
+        content: '';
+        background-image: url(../assets/img/how-it-works-icons.png);
+        background-repeat: no-repeat;
+      }
+
+      &:first-child:before {
+        background-position: 0 0;
+      }
+
+      &:nth-child(2):before {
+        background-position: -61px 0;
+      }
+
+      &:nth-child(3):before {
+        background-position: -122px 0;
+      }
+    }
+  }
+}

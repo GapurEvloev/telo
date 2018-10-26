@@ -1,0 +1,124 @@
+.to-participants-section {
+  position: relative;
+  color: $brown;
+  background-color: $grayLighter;
+  overflow: hidden;
+
+  @include mediaXs {
+    text-align: center;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    content: '';
+    background-color: $grayLight;
+
+    @include mediaTsMax {
+      display: none;
+    }
+  }
+
+  img {
+    margin: 0 0 18px;
+
+    @include mediaTsMax {
+      margin-bottom: 12px;
+      width: 100px;
+    }
+  }
+
+  p {
+    line-height: 1.66666;
+    font-weight: $boldFontWeight;
+    color: $grayDarker;
+
+    span {
+      font-weight: $baseFontWeight;
+      color: $white;
+    }
+  }
+
+  h2 {
+    margin: 0 0 12px;
+    color: $brown;
+
+    @include mediaSmMin {
+      max-width: 350px;
+    }
+
+    & + p {
+      font-size: 24px;
+      font-weight: $baseFontWeight;
+      line-height: 1.5;
+      color: $gray;
+
+      @include mediaTs {
+        font-size: 18px;
+      }
+
+      @include mediaXs {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+
+    @include mediaTsMax {
+      float: none;
+      width: auto;
+    }
+
+    &:first-child {
+      padding: 56px 100px 95px 0;
+
+      @include mediaSm {
+        padding: 45px 50px 60px 0;
+      }
+
+      @include mediaTsMax {
+        margin: 0 -15px;
+        padding: 30px 15px 40px;
+        background-color: $grayLight;
+      }
+
+      @include mediaXs {
+        padding-bottom: 30px;
+      }
+    }
+
+    &:last-child {
+      padding: 56px 0 100px 95px;
+
+      @include mediaSm {
+        padding: 45px 0 50px 60px;
+      }
+
+      @include mediaTsMax {
+        padding: 40px 0;
+      }
+
+      @include mediaXs {
+        padding-top: 30px;
+      }
+
+      .thesis:last-child p {
+        @include mediaSmMin {
+          max-width: 392px;
+        }
+      }
+    }
+  }
+
+  .thesis + .thesis {
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    border-top: 1px solid transparentize($white, 0.5);
+  }
+}

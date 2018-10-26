@@ -1,0 +1,394 @@
+.header-section {
+  position: relative;
+  color: $brown;
+  overflow: hidden;
+  background-color: $accentColor;
+
+  @include mediaXs {
+    text-align: center;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    margin-left: -500px;
+    width: 1124px;
+    height: 725px;
+    content: '';
+    background-image: url(../assets/img/header-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    pointer-events: none;
+
+    @include mediaMd {
+      bottom: -35px;
+    }
+
+    @include mediaSm {
+      bottom: -20px;
+      margin-left: -420px;
+      width: 1055px;
+      height: 680px;
+    }
+
+    @include mediaTs {
+      bottom: 150px;
+      margin-left: -120px;
+      width: 791px;
+      height: 510px;
+      transform: scaleX(-1);
+    }
+
+    @include mediaXs {
+      display: none;
+    }
+  }
+
+  .container {
+    z-index: 1;
+  }
+}
+
+.header-section .top-title-block {
+  margin: 0 0 40px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $brown;
+
+  @include mediaSmMax {
+    margin-bottom: 20px;
+  }
+
+  @include mediaXs {
+    padding: 7px 0;
+    font-size: 0;
+    line-height: 0;
+
+    span,
+    strong {
+      display: block;
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  strong {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: $boldFontWeight;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.header-section .text-block {
+  .logotype {
+    display: block;
+    margin-bottom: 42px;
+
+    @include mediaSmMax {
+      margin-bottom: 20px;
+    }
+
+    @include mediaTsMax {
+      width: 140px;
+    }
+
+    @include mediaXs {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .navigation {
+    margin: 0 0 52px;
+
+    @include mediaSmMax {
+      margin-bottom: 30px;
+    }
+
+    & > li {
+      display: inline-block;
+
+      & + li {
+        margin-left: 16px;
+
+        @include mediaTsMax {
+          margin-left: 12px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none;
+        color: $white;
+        border-bottom: 1px solid transparent;
+        transition: border 0.15s ease;
+
+        &:hover {
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    text-transform: uppercase;
+
+    @include mediaTs {
+      width: 260px;
+      margin-bottom: 20px;
+    }
+
+    @include mediaXs {
+      line-height: 1;
+    }
+  }
+
+  p {
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.3125;
+
+    @include mediaTs {
+      width: 50%;
+      min-width: 260px;
+    }
+
+    @include mediaXs {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}
+
+.header-section .share-block {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  text-align: center;
+  color: $white;
+
+  p {
+    margin: 0 0 25px;
+    width: auto;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  strong {
+    font-size: 18px;
+  }
+
+  .ya-share2__list {
+    & > li {
+      margin: 0 0 12px;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      background-image: url(../assets/img/socials.png);
+      background-repeat: no-repeat;
+      background-size: auto 55px;
+      transition: opacity 0.3s ease;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.8;
+      }
+
+      * {
+        display: none;
+      }
+    }
+  }
+
+  .ya-share2__item_service_vkontakte a {
+    background-position: 0 0;
+  }
+
+  .ya-share2__item_service_facebook a {
+    background-position: 33.33333% 0;
+  }
+
+  .ya-share2__item_service_twitter a {
+    background-position: 66.66666% 0;
+  }
+
+  .ya-share2__item_service_odnoklassniki a {
+    background-position: 100% 0;
+  }
+
+  @include mediaSmMax {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 30px 0 0;
+    text-align: left;
+
+    p {
+      margin: 0 0 15px;
+      font-size: 18px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .ya-share2__list {
+      vertical-align: top;
+      display: inline-block;
+
+      li {
+        margin: 0;
+        display: inline-block;
+
+        & + li {
+          margin-left: 5px;
+        }
+
+        a {
+          width: 36px;
+          height: 36px;
+          background-size: auto 36px;
+        }
+      }
+    }
+  }
+
+  @include mediaTs {
+    margin-top: 20px;
+
+    p {
+      margin: 0 0 10px;
+    }
+  }
+
+  @include mediaXs {
+    text-align: center;
+
+    p, strong {
+      font-size: 16px;
+    }
+  }
+}
+
+.header-section .subscribe-block {
+  padding: 48px 0 94px;
+
+  @include mediaMdMax {
+    padding-bottom: 60px;
+  }
+
+  @include mediaSmMax {
+    padding: 27px 0 33px;
+  }
+
+  @include mediaTs {
+    height: 150px;
+    padding: 20px 0 24px;
+  }
+
+  @include mediaTsMax {
+    margin-top: 20px;
+    background-color: $brown;
+  }
+
+  @include mediaXs {
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+
+  h4 {
+    margin: 0 0 26px;
+    color: $white;
+
+    @include mediaTsMax {
+      margin: 0 0 18px;
+    }
+
+    @include mediaXs {
+      font-size: 18px;
+      font-weight: $boldFontWeight;
+    }
+  }
+
+  .fieldset {
+    position: relative;
+    font-size: 0;
+
+    .error {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 420px;
+      padding: 10px 5px;
+      font-size: 14px;
+      color: $white;
+    }
+  }
+
+  input[type=text],
+  input[type=email] {
+    @include mediaXs {
+      margin: 0 auto 15px;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  input[type=submit] {
+    margin-left: 15px;
+
+    @include mediaXs {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+      background-color: $white;
+    }
+
+    &:active {
+      color: $accentColor;
+      background-color: darken($white, 10%);
+      border-color: darken($white, 10%);
+    }
+  }
+
+  .success {
+    padding: 20px 0;
+
+    h3 {
+      @include mediaTsMax {
+        color: $white;
+      }
+    }
+  }
+}

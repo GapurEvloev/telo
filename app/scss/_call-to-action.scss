@@ -1,0 +1,124 @@
+.call-to-action-section {
+  position: relative;
+  height: 451px;
+  background-color: $grayLight;
+  padding: 50px 0;
+
+  @include mediaMd {
+    height: 410px;
+  }
+
+  @include mediaSm {
+    height: 370px;
+  }
+
+  @include mediaSmMax {
+    padding-top: 35px;
+  }
+
+  @include mediaTs {
+    height: auto;
+    padding-bottom: 130px;
+  }
+
+  @include mediaXs {
+    height: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    margin-left: -620px;
+    width: 770px;
+    height: 492px;
+    content: '';
+    background-image: url(../assets/img/call-to-action-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @include mediaMd {
+      margin-left: -530px;
+      width: 659px;
+      height: 392px;
+    }
+
+    @include mediaSm {
+      margin-left: -500px;
+      width: 659px;
+      height: 420px;
+    }
+
+    @include mediaTs {
+      left: 30%;
+      margin-left: -250px;
+      width: 501px;
+      height: 320px;
+    }
+
+    @include mediaXs {
+      display: none;
+    }
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  .text-block {
+    margin-left: 380px;
+
+    @include mediaMd {
+      margin-left: 255px;
+    }
+
+    @include mediaSm {
+      margin-left: 180px;
+    }
+
+    @include mediaTs {
+      margin-left: 30%;
+    }
+
+    @include mediaXs {
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+
+      @include mediaLg {
+        font-size: 60px;
+        line-height: 1;
+      }
+
+      @include mediaTsMax {
+        font-size: 24px;
+      }
+
+      span {
+        @extend h3;
+        display: block;
+        letter-spacing: -0.02em;
+
+        @include mediaSm {
+          font-size: 28px;
+        }
+
+        @include mediaTsMax {
+          display: inline;
+          font-size: inherit;
+        }
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+}

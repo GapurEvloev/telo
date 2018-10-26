@@ -1,0 +1,168 @@
+.reward-section {
+  position: relative;
+  height: 357px;
+  padding: 72px 0 0;
+  color: $white;
+  background-color: $accentColor;
+
+  @include mediaSmMax {
+    height: auto;
+    padding: 50px 0 30px;
+  }
+
+  @include mediaTs {
+    min-height: 310px;
+  }
+
+  @include mediaXs {
+    text-align: center;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    margin-left: -218px;
+    width: 490px;
+    height: 447px;
+    content: '';
+    background-image: url(../assets/img/reward-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @include mediaMd {
+      margin-left: -196px;
+      width: 462px;
+      height: 420px;
+    }
+
+    @include mediaSm {
+      margin-left: -140px;
+      width: 307px;
+      height: 280px;
+    }
+
+    @include mediaTs {
+      left: 45%;
+      margin-left: 0;
+      width: 400px;
+      height: 365px;
+    }
+
+    @include mediaXs {
+      display: none;
+    }
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  .left-text {
+    float: left;
+    max-width: 320px;
+    font-size: 24px;
+    line-height: 1.66666;
+
+    @include mediaMd {
+      font-size: 22px;
+    }
+
+    @include mediaSm {
+      max-width: 310px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    @include mediaTsMax {
+      float: none;
+      margin: 0 0 20px;
+      max-width: 300px;
+      width: 47%;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    @include mediaXs {
+      max-width: none;
+      width: auto;
+    }
+  }
+
+  .right-text {
+    float: right;
+    max-width: 250px;
+    padding: 4px 0 0;
+    text-align: center;
+    font-size: 16px;
+
+    @include mediaTsMax {
+      float: none;
+      text-align: inherit;
+      max-width: 280px;
+    }
+
+    @include mediaXs {
+      max-width: none;
+    }
+
+    small {
+      margin: 0 0 24px;
+      display: inline-block;
+      max-width: 170px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: transparentize($white, 0.5);
+
+      @include mediaSmMax {
+        margin-bottom: 10px;
+        line-height: 1.3;
+        color: $white;
+      }
+
+      @include mediaTsMax {
+        margin-bottom: 15px;
+        max-width: 230px;
+
+        .ellipsis {
+          display: none;
+        }
+      }
+    }
+
+    .reward {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 18px;
+
+      @include mediaSmMin {
+        .hyphen {
+          letter-spacing: -20em;
+        }
+      }
+
+      strong {
+        display: block;
+        font-size: 58px;
+        line-height: 1.1;
+        letter-spacing: -0.06em;
+
+        @include mediaSm {
+          margin-top: -1px;
+          font-size: 50px;
+          line-height: 0.95;
+          letter-spacing: 0;
+        }
+
+        @include mediaTsMax {
+          font-size: 42px;
+          line-height: 1.1;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  font-weight: $baseFontWeight;
+  line-height: 1.33333;
+  color: $gray;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+h2, h3,
+h4, h5, h6 {
+  font-weight: $blackFontWeight;
+  color: $brown;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+h4 {
+  font-weight: $boldFontWeight;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@include mediaSmMax {
+  h2 {
+    font-size: 42px;
+  }
+}
+
+@include mediaTsMax {
+  body {
+    font-size: 16px;
+  }
+
+  h2, h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+@include mediaXs {
+  h2, h3 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+
+strong {
+  font-weight: $boldFontWeight;
+}
+
+a {
+  color: $accentColor;
+  text-decoration: underline;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+input[type=text],
+input[type=email] {
+  appearance: none;
+  vertical-align: top;
+  display: inline-block;
+  width: 235px;
+  height: 36px;
+  padding: 5px 12px;
+  font-size: $baseFontSize;
+  font-weight: $baseFontWeight;
+  line-height: 26px;
+  background-color: $white;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type=submit] {
+  appearance: none;
+  vertical-align: top;
+  display: inline-block;
+  padding: 6px 34px 7px;
+  font-size: 21px;
+  font-weight: $baseFontWeight;
+  line-height: 1;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  box-shadow: none;
+  outline: none;
+  transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+  cursor: pointer;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.container {
+  @include clearfix;
+
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+
+  @include mediaLg {
+    width: 1110px;
+  }
+
+  @include mediaMd {
+    width: 970px;
+  }
+
+  @include mediaSm {
+    width: 750px;
+  }
+}
